@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.10" icons="true" automaticImage="PNG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <package id="1" language="java" name="com.flp.ems.util" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/util" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="114" x="308" y="107"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="2" language="java" name="com.flp.ems.service.IEmployeeService" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/service/IEmployeeService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="406" x="951" y="637"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="3" language="java" name="com.flp.ems.dao" project="EMS-Phase- I" file="/EMS-Phase- I/src/com/flp/ems/dao" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="118" x="462" y="107"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="4" language="java" name="com.flp.ems.view" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/view" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="123" x="620" y="107"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="5" language="java" name="com.flp.ems.domain.Project" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/domain/Project.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="155" x="783" y="107"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.flp.ems.domain.Role" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/domain/Role.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="154" x="978" y="107"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.flp.ems.view.UserInteraction" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/view/UserInteraction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="142" x="1172" y="107"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="8" language="java" name="com.flp.ems.service" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="139" x="1354" y="107"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="9" language="java" name="com.flp.ems.domain" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/domain" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="139" x="1533" y="107"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="10" language="java" name="com.flp.ems.domain.Department" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/domain/Department.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="154" x="1712" y="107"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="com.flp.ems.domain.Employee" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/domain/Employee.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="639" width="159" x="1298" y="866"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="com.flp.ems.util.Validate" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/util/Validate.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="189" x="1906" y="107"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="com.flp.ems.dao.IEmployeeDao" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/dao/IEmployeeDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="266" x="1497" y="866"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="14" language="java" name="com.flp.ems.service.EmployeeServiceImpl" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/service/EmployeeServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="406" x="1172" y="426"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="com.flp.ems.view.BootClass" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/view/BootClass.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="113" x="2135" y="107"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="com.flp.ems.dao.EmployeeDaoImplForList" project="EMS-Phase- I" 
+    file="/EMS-Phase- I/src/com/flp/ems/dao/EmployeeDaoImplForList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="266" x="1397" y="637"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="17">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="18" name="employeeService"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="21" name="employees"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="24" name="employees"/>      
+      <multiplicity id="25" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="26">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="27">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
