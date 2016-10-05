@@ -32,7 +32,7 @@ public class EmployeeDaoImplForDB implements IEmployeeDao{
 			insertStatement = dbConnection.prepareStatement(props.getProperty("jdbc.query.insert.employee"));
 			insertStatement.setString(1, employee.getName());
 			insertStatement.setString(2, employee.getKinId());
-			System.out.println(employee.getKinId());
+			//System.out.println(employee.getKinId());
 			insertStatement.setString(3, employee.getEmailId());
 			insertStatement.setLong(4, employee.getPhoneNumber());
 			insertStatement.setDate(5, new Date(employee.getBirthDate().getTime()));
@@ -69,8 +69,8 @@ public class EmployeeDaoImplForDB implements IEmployeeDao{
 				employee = selectStatement.executeQuery();
 				employee.next();
 				employee.updateLong("phone_number", modifyEmployee.getPhoneNumber());
-				employee.updateDate("birth_date", (Date) modifyEmployee.getBirthDate());
-				employee.updateDate("joining_date", (Date) modifyEmployee.getJoiningDate());
+				employee.updateDate("birth_date", new Date(modifyEmployee.getBirthDate().getTime()));
+				employee.updateDate("joining_date", new Date(modifyEmployee.getJoiningDate().getTime()));
 				employee.updateString("address", modifyEmployee.getAddres());
 				employee.updateInt("department_id", modifyEmployee.getDepartmentId());
 				employee.updateInt("project_id", modifyEmployee.getProjectId());
@@ -131,31 +131,23 @@ public class EmployeeDaoImplForDB implements IEmployeeDao{
 				
 				selectStatement = dbConnection.prepareStatement("select * from employee where kin_id=?");
 				selectStatement.setString(1, employee.getKinId());
-				selectResult = selectStatement.executeQuery();
-				selectResult.next();
-				Employee tempEmployee = new Employee();
-				tempEmployee.setName(selectResult.getString("name"));
-				tempEmployee.setKinId(selectResult.getString("kin_id"));
-				tempEmployee.setEmailId(selectResult.getString("email_id"));
-				tempEmployee.setEmailId(selectResult.getString("email_id"));
-				tempEmployee.setBirthDate(selectResult.getDate("birth_date"));
-				tempEmployee.setJoiningDate(selectResult.getDate("joining_date"));
-				tempEmployee.setAddres(selectResult.getString("address"));
-				tempEmployee.setDepartmentId(selectResult.getInt("department_id"));
-				tempEmployee.setProjectId(selectResult.getInt("project_id"));
-				tempEmployee.setRoleId(selectResult.getInt("role_id"));
-				empl.add(tempEmployee);
+				
 			}
 			else if(employee.getEmailId() != null){
 				selectStatement = dbConnection.prepareStatement("select * from employee where email_id=?");
 				selectStatement.setString(1, employee.getEmailId());
-				selectResult = selectStatement.executeQuery();
-				selectResult.next();
+			}
+			else{
+				selectStatement = dbConnection.prepareStatement("select * from employee where name=?");
+				selectStatement.setString(1, employee.getName());
+			}
+			selectResult = selectStatement.executeQuery();
+			while(selectResult.next()){
 				Employee tempEmployee = new Employee();
 				tempEmployee.setName(selectResult.getString("name"));
 				tempEmployee.setKinId(selectResult.getString("kin_id"));
 				tempEmployee.setEmailId(selectResult.getString("email_id"));
-				tempEmployee.setEmailId(selectResult.getString("email_id"));
+				tempEmployee.setPhoneNumber(Long.parseLong(selectResult.getString("phone_number")));
 				tempEmployee.setBirthDate(selectResult.getDate("birth_date"));
 				tempEmployee.setJoiningDate(selectResult.getDate("joining_date"));
 				tempEmployee.setAddres(selectResult.getString("address"));
@@ -163,26 +155,6 @@ public class EmployeeDaoImplForDB implements IEmployeeDao{
 				tempEmployee.setProjectId(selectResult.getInt("project_id"));
 				tempEmployee.setRoleId(selectResult.getInt("role_id"));
 				empl.add(tempEmployee);
-			}
-			else{
-				selectStatement = dbConnection.prepareStatement("select * from employee where name=?");
-				selectStatement.setString(1, employee.getName());
-				selectResult = selectStatement.executeQuery();
-				while(selectResult.next()){
-					Employee tempEmployee = new Employee();
-					tempEmployee.setName(selectResult.getString("name"));
-					tempEmployee.setKinId(selectResult.getString("kin_id"));
-					tempEmployee.setEmailId(selectResult.getString("email_id"));
-					tempEmployee.setEmailId(selectResult.getString("email_id"));
-					tempEmployee.setBirthDate(selectResult.getDate("birth_date"));
-					tempEmployee.setJoiningDate(selectResult.getDate("joining_date"));
-					tempEmployee.setAddres(selectResult.getString("address"));
-					tempEmployee.setDepartmentId(selectResult.getInt("department_id"));
-					tempEmployee.setProjectId(selectResult.getInt("project_id"));
-					tempEmployee.setRoleId(selectResult.getInt("role_id"));
-					empl.add(tempEmployee);
-				}
-				
 				
 				
 			}

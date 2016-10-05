@@ -176,11 +176,11 @@ public class UserInteraction {
 
 	public void SearchEmployee() {
 		
-		System.out.println("Please select a search criteria from the following menu:\n1.Only name\n2.Only Kin Id\n3.Only Email  Id\n4. name and kin Id\n5. name and email id\n6. email and kin id\n7. all three\n");
+		System.out.println("Please select a search criteria from the following menu:\n1.name\n2.Kin Id\n3.Email  Id\n");
 		Scanner search = new Scanner(System.in);
 		int choice = search.nextInt();
 		HashMap<String,String> searchEmp = new HashMap<String, String>();
-		switch(choice){
+		/*switch(choice){
 		case 1:
 			System.out.println("Name:");
 			searchEmp.put("name", new Scanner(System.in).nextLine());
@@ -223,15 +223,22 @@ public class UserInteraction {
 		
 		default :
 				System.out.println("Please enter valid option");
-				SearchEmployee();
-		}
+				SearchEmployee();*/
+		//}
+		System.out.println("Name:");
+		searchEmp.put("name", new Scanner(System.in).nextLine());
+		System.out.println("Kin Id:");
+		searchEmp.put("kinId", new Scanner(System.in).nextLine());
+		System.out.println("Email Id:");
+		searchEmp.put("emailId",new Scanner(System.in).nextLine());
+		
 		ArrayList<HashMap<String, String>> employeeMap = null;
 		try {
 			employeeMap = this.employeeService.searchEmployee(searchEmp);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		if(employeeMap == null){
+		if(employeeMap.size() == 0){
 			System.out.println("The required employee does not exist");
 			
 		}
