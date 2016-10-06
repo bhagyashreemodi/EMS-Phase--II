@@ -95,11 +95,12 @@ public class UserInteraction {
 		
 		getAllEmployee();
 		System.out.println("Please enter the Kin Id of the employee you want to modify :\nKin Id\n");
-		String kinId = new Scanner(System.in).nextLine();
-		System.out.println("Plese enter the field name that you want to modify address, phone number or exit:");
+		Scanner input = new Scanner(System.in);
+		String kinId = input.nextLine();
+		//System.out.println("Plese enter the field name that you want to modify name, address, phone number or exit:");
 		HashMap<String, String> modifyEmp = new HashMap<String, String>();
 		modifyEmp.put("kinId", kinId);
-		switch(new Scanner(System.in).nextLine().toLowerCase()){
+		/*switch(new Scanner(System.in).nextLine().toLowerCase()){
 		
 		case "phone number" :
 			System.out.println("Please enter your phone number:");
@@ -115,7 +116,20 @@ public class UserInteraction {
 			System.out.println("You can modify your phone number or address only");
 			ModifyEmployee();
 			break;
-		}
+		}*/
+		/*System.out.println("name:");
+		modifyEmp.put("name", input.nextLine());*/
+		System.out.println("phone number:");
+		modifyEmp.put("phoneNumber", input.nextLine());
+		System.out.println("address:");
+		modifyEmp.put("address", input.nextLine());
+		System.out.println("Please select one of the following departments :\n1. Barclaycard\n2. PCB");
+		modifyEmp.put("departmentId", input.nextLine());
+		System.out.println("Please select one of the following Projects :\n1. CWS\n2. BAPI");
+		modifyEmp.put("projectId", input.nextLine());
+		System.out.println("Please select one of the following Roles :\n1. BA3\n2. BA4");
+		modifyEmp.put("roleId", input.nextLine());
+		
 		try{
 			if(employeeService.modifyEmployee(modifyEmp)){
 				System.out.println("Entry modified successfully");
@@ -176,9 +190,9 @@ public class UserInteraction {
 
 	public void SearchEmployee() {
 		
-		System.out.println("Please select a search criteria from the following menu:\n1.name\n2.Kin Id\n3.Email  Id\n");
+		System.out.println("Please enter the values fields on which you want to search:");
 		Scanner search = new Scanner(System.in);
-		int choice = search.nextInt();
+	//	int choice = search.nextInt();
 		HashMap<String,String> searchEmp = new HashMap<String, String>();
 		/*switch(choice){
 		case 1:

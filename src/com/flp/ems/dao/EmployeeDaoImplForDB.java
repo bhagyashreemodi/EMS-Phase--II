@@ -68,6 +68,7 @@ public class EmployeeDaoImplForDB implements IEmployeeDao{
 				selectStatement.setString(1, modifyEmployee.getKinId());
 				employee = selectStatement.executeQuery();
 				employee.next();
+				//employee.updateString("name", modifyEmployee.getName());
 				employee.updateLong("phone_number", modifyEmployee.getPhoneNumber());
 				employee.updateDate("birth_date", new Date(modifyEmployee.getBirthDate().getTime()));
 				employee.updateDate("joining_date", new Date(modifyEmployee.getJoiningDate().getTime()));
@@ -127,13 +128,13 @@ public class EmployeeDaoImplForDB implements IEmployeeDao{
 		dbConnection = DriverManager.getConnection(props.getProperty("jdbc.url"));
 		ResultSet selectResult = null;
 		try{
-			if(employee.getKinId() != null){
+			if(!(employee.getKinId().isEmpty())){
 				
 				selectStatement = dbConnection.prepareStatement("select * from employee where kin_id=?");
 				selectStatement.setString(1, employee.getKinId());
 				
 			}
-			else if(employee.getEmailId() != null){
+			else if(!(employee.getEmailId().isEmpty())){
 				selectStatement = dbConnection.prepareStatement("select * from employee where email_id=?");
 				selectStatement.setString(1, employee.getEmailId());
 			}

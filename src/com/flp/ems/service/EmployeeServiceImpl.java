@@ -42,7 +42,7 @@ public class EmployeeServiceImpl implements IEmployeeService{
 	@Override
 	public boolean modifyEmployee(HashMap<String, String> modifyEmp) throws Exception {
 		
-		ArrayList<Employee> employees = this.employees.getAllEmployee();
+		//ArrayList<Employee> employees = this.employees.getAllEmployee();
 		Employee modifyEmployee = this.employees.getEmpForModification(modifyEmp.get("kinId"));
 		Employee employee =null;
 		
@@ -52,15 +52,30 @@ public class EmployeeServiceImpl implements IEmployeeService{
 		try {
 			employee = (Employee) modifyEmployee.clone();
 		} catch (CloneNotSupportedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(modifyEmp.containsKey("phoneNumber")){
+		/*if(modifyEmp.containsKey("phoneNumber")){
 			employee.setPhoneNumber(Long.parseLong(modifyEmp.get("phoneNumber")));
 		}
 		if(modifyEmp.containsKey("address")){
 			employee.setAddres(modifyEmp.get("address"));
-		}
+		}*/
+		
+		/*if(!(modifyEmp.get("name").isEmpty()))
+			employee.setName(modifyEmp.get("name"));*/
+		if(!(modifyEmp.get("phoneNumber").isEmpty()))
+			employee.setPhoneNumber(Long.parseLong(modifyEmp.get("phoneNumber")));
+		if(!(modifyEmp.get("address").isEmpty()))
+			employee.setAddres(modifyEmp.get("address"));
+		if(!(modifyEmp.get("departmentId").isEmpty()))
+			employee.setDepartmentId(Integer.parseInt(modifyEmp.get("departmentId")));
+		if(!(modifyEmp.get("projectId").isEmpty()))
+			employee.setProjectId(Integer.parseInt(modifyEmp.get("projectId")));
+		if(!(modifyEmp.get("roleId").isEmpty()))
+			employee.setRoleId(Integer.parseInt(modifyEmp.get("roleId")));
+		
+		
+		
 		return this.employees.modifyEmployee(employee);
 	}
 
